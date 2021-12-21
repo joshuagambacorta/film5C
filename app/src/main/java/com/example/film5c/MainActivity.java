@@ -33,13 +33,14 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String titolo = (String)lvFilm.getItemAtPosition(position);
                 Intent i = new Intent(getApplicationContext(), MainActivity2.class);
-                i.putExtra("etichetta", "ciao");
+                i.putExtra("etichetta", titolo);
                 startActivity(i);
                 Log.d("click_provdedura", "Hai cliccato sulla " + position + " voce.");
             }
         });
-
         lvFilm.setAdapter(aaFilm);
+
+
 
         btnEsci = (Button)findViewById(R.id.btnesci);
 
